@@ -65,6 +65,7 @@ app.post('/api/employees', async (req, res, next) => {
   }
 })
 
+// PUT employees
 app.put('/api/employees/:id', async (req, res, next) => {
   try {
     const SQL = `
@@ -83,6 +84,7 @@ app.put('/api/employees/:id', async (req, res, next) => {
   }
 })
 
+// DELETE employees
 app.delete('/api/employees/:id', async (req, res, next) => {
   try {
     const SQL = `
@@ -96,6 +98,7 @@ app.delete('/api/employees/:id', async (req, res, next) => {
   }
 })
 
+// Init function
 const init = async () => {
   await client.connect()
   console.log('connected to server')
